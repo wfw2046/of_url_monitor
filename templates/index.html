@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+    <div class="page-header">
+        formdata:
+        <p>
+        {% if name %}
+            {{ name }}
+        {% endif %}
+        <br />
+        {% if passwd %}
+            {{ passwd }}
+        {% endif %}
+        <br />
+        {% if metricname %}
+            {{ metricname }}
+        {% endif %}
+        <br />
+        {% if address %}
+            {{ address }}
+        {% endif %}
+        <br />
+        </p>
+    </div>
+    {{ wtf.quick_form(form) }}
+{% endblock %}
